@@ -9,44 +9,38 @@
 
     <title>Danson Ihachi | ICT Professional | Programmer | Web Developer | Robotics | Technology Enthusiast</title>
 
-    <meta name="description" content="Official portfolio of Danson Ihachi, an ICT professional, programmer, web developer and robotics enthusiast from Kenya. Explore his ICT skills, programming projects, web development, robotics, STEM achievements and technology experience.">
+    <meta name="description"
+        content="Official portfolio of Danson Ihachi, an ICT professional, programmer, web developer and robotics enthusiast from Kenya. Explore his ICT skills, programming projects, web development, robotics, STEM achievements and technology experience.">
 
     <meta name="author" content="Danson Ihachi">
 
-    <meta name="keywords" content="Danson Ihachi, ICT professional, programmer, ICT Kenya, C programming, C++ programming, web development, technology, STEM, Young Scientists Kenya">
+    <meta name="keywords"
+        content="Danson Ihachi, ICT professional, programmer, ICT Kenya, C programming, C++ programming, web development, technology, STEM, Young Scientists Kenya">
 
     <meta name="robots" content="index, follow">
+
     <link rel="canonical" href="https://dansonihachi.github.io/">
+
+    <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://dansonihachi.github.io/#person",
-    "name": "Danson Ihachi",
-    "url": "https://dansonihachi.github.io/",
-    "image": "https://dansonihachi.github.io/profile.jpg",
-    "jobTitle": "ICT Professional, Programmer and Web Developer",
-    "description": "Danson Ihachi is an ICT professional, programmer, web developer and technology enthusiast from Kenya.",
-    "alumniOf": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "Olympic High School"
-      },
-      {
-        "@type": "EducationalOrganization",
-        "name": "Vision Institute of Professionals"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61554581677224",
-      "https://www.instagram.com/hajijones6"
-    ]
-  }
-}
-</script>
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Danson Ihachi",
+        "url": "https://dansonihachi.github.io/",
+        "image": "https://dansonihachi.github.io/profile.jpg",
+        "jobTitle": "ICT Professional, Programmer and Web Developer",
+        "description": "Danson Ihachi is an ICT professional, programmer, web developer and technology enthusiast from Kenya.",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Vision Institute of Professionals"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61554581677224",
+            "https://www.instagram.com/hajijones6"
+        ]
+    }
+    </script>
 
     <style>
 
@@ -66,6 +60,11 @@
             line-height: 1.7;
             background: #f5f7ff;
             color: #1e293b;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         /* =========================
@@ -112,7 +111,7 @@
         }
 
         /* =========================
-           HOME SECTION
+           HOME
         ========================== */
 
         #home {
@@ -174,6 +173,16 @@
             max-width: 900px;
         }
 
+        .home-profile {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+        }
+
         .home-content h1 {
             font-size: 58px;
             margin-bottom: 15px;
@@ -192,7 +201,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .home-content p {
+        .home-content > p {
             font-size: 21px;
             color: #dbeafe;
             margin-bottom: 30px;
@@ -287,10 +296,30 @@
             background: white;
         }
 
-        .about {
-            max-width: 900px;
+        .about-container {
+            max-width: 1000px;
             margin: auto;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: auto;
+
+            border: 5px solid #6366f1;
+
+            box-shadow:
+                0 15px 35px rgba(99, 102, 241, 0.25);
+        }
+
+        .about {
+            text-align: left;
             font-size: 18px;
             color: #475569;
         }
@@ -407,6 +436,18 @@
         .achievement-card p {
             color: #475569;
             font-size: 17px;
+        }
+
+        .achievement-image {
+            width: 100%;
+            max-width: 750px;
+            height: 350px;
+            object-fit: cover;
+            margin: 20px auto;
+            border-radius: 15px;
+
+            box-shadow:
+                0 10px 25px rgba(15, 23, 42, 0.12);
         }
 
         .achievement-list {
@@ -611,6 +652,15 @@
                 font-size: 42px;
             }
 
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about {
+                text-align: center;
+            }
+
         }
 
         @media (max-width: 600px) {
@@ -619,7 +669,7 @@
                 font-size: 34px;
             }
 
-            .home-content p {
+            .home-content > p {
                 font-size: 17px;
             }
 
@@ -633,6 +683,20 @@
 
             nav h2 {
                 font-size: 21px;
+            }
+
+            .home-profile {
+                width: 140px;
+                height: 140px;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .achievement-image {
+                height: 250px;
             }
 
         }
@@ -698,14 +762,21 @@
 
         <div class="home-content">
 
+            <img
+                src="profile.jpg"
+                alt="Danson Ihachi - ICT Professional"
+                class="home-profile"
+            >
+
             <h1>
                 Hello, I'm
                 <span>Danson Ihachi</span>
             </h1>
 
             <p>
-    ICT Professional | Programmer | Web Developer | Technology Enthusiast from Kenya
-             </p>
+                ICT Professional | Programmer | Web Developer |
+                Technology Enthusiast from Kenya
+            </p>
 
             <div class="home-description">
 
@@ -735,37 +806,51 @@
 
         <h2>About Me</h2>
 
-        <div class="about">
+        <div class="about-container">
 
-            <p>
-                Hello! My name is <strong>Danson Ihachi</strong>. I am an
-                Information and Communication Technology (ICT) professional,
-                programmer and technology enthusiast from Kenya.
-            </p>
+            <div>
 
-            <p>
-                I have completed my Diploma in Information and Communication
-                Technology at Vision Institute of Professionals. My areas of
-                interest include programming, web development, computer
-                applications, databases, robotics and technology.
-            </p>
+                <img
+                    src="profile.jpg"
+                    alt="Profile photo of Danson Ihachi"
+                    class="profile-image"
+                >
 
-            <p>
-                I have experience with C and C++ programming, HTML and CSS,
-                Microsoft Office applications, database management, robotics
-                and physical computing. I am passionate about using technology
-                to develop practical solutions and continuously improving
-                my technical skills.
-            </p>
+            </div>
 
-            <p>
-                My STEM experience includes participation in the Young
-                Scientists Kenya National Science and Technology Exhibition,
-                the Sahara Steamers Programme 2.0 and the Code with Kids
-                programme. These experiences have strengthened my skills
-                in innovation, problem-solving, programming, teamwork
-                and technology.
-            </p>
+            <div class="about">
+
+                <p>
+                    Hello! My name is <strong>Danson Ihachi</strong>. I am an
+                    Information and Communication Technology (ICT) professional,
+                    programmer and technology enthusiast from Kenya.
+                </p>
+
+                <p>
+                    I have completed my Diploma in Information and Communication
+                    Technology at Vision Institute of Professionals. My areas of
+                    interest include programming, web development, computer
+                    applications, databases, robotics and technology.
+                </p>
+
+                <p>
+                    I have experience with C and C++ programming, HTML and CSS,
+                    Microsoft Office applications, database management, robotics
+                    and physical computing. I am passionate about using technology
+                    to develop practical solutions and continuously improving
+                    my technical skills.
+                </p>
+
+                <p>
+                    My STEM experience includes participation in the Young
+                    Scientists Kenya National Science and Technology Exhibition,
+                    the Sahara Steamers Programme 2.0 and the Code with Kids
+                    programme. These experiences have strengthened my skills
+                    in innovation, problem-solving, programming, teamwork
+                    and technology.
+                </p>
+
+            </div>
 
         </div>
 
@@ -847,11 +932,19 @@
             </p>
 
 
+            <!-- YOUNG SCIENTISTS -->
+
             <div class="achievement-card">
 
                 <h3>
                     Young Scientists Kenya National Science and Technology Exhibition
                 </h3>
+
+                <img
+                    src="young-scientists.jpg"
+                    alt="Danson Ihachi at the Young Scientists Kenya National Science and Technology Exhibition"
+                    class="achievement-image"
+                >
 
                 <p>
                     I successfully exhibited a project at the Young Scientists
@@ -871,11 +964,19 @@
             </div>
 
 
+            <!-- SAHARA STEAMERS -->
+
             <div class="achievement-card">
 
                 <h3>
                     Sahara Steamers Programme 2.0
                 </h3>
+
+                <img
+                    src="sahara-steamers.jpg"
+                    alt="Danson Ihachi participating in the Sahara Steamers Programme 2.0"
+                    class="achievement-image"
+                >
 
                 <p>
                     I successfully completed the Sahara Steamers Programme 2.0,
@@ -908,6 +1009,38 @@
             </div>
 
 
+            <!-- STEM TEAM -->
+
+            <div class="achievement-card">
+
+                <h3>
+                    STEM Team Experience
+                </h3>
+
+                <img
+                    src="stem-team.jpg"
+                    alt="Danson Ihachi with a STEM team"
+                    class="achievement-image"
+                >
+
+                <p>
+                    I participated in STEM activities that gave me practical
+                    experience working with other students and developing
+                    technology-based ideas.
+                </p>
+
+                <br>
+
+                <p>
+                    These experiences helped me develop teamwork, collaboration,
+                    creativity, communication and problem-solving skills.
+                </p>
+
+            </div>
+
+
+            <!-- CODE WITH KIDS -->
+
             <div class="achievement-card">
 
                 <h3>
@@ -930,6 +1063,8 @@
 
             </div>
 
+
+            <!-- SKILLS DEVELOPED -->
 
             <div class="achievement-card">
 
@@ -992,197 +1127,6 @@
             <div class="skill">
                 Microsoft Word
             </div>
-            <div class="skill">
-                Quickbooks
-            </div>
 
             <div class="skill">
-                Microsoft Excel
-            </div>
-
-            <div class="skill">
-                Microsoft PowerPoint
-            </div>
-
-            <div class="skill">
-                Microsoft Publisher
-            </div>
-
-            <div class="skill">
-                C Programming
-            </div>
-
-            <div class="skill">
-                C++ Programming
-            </div>
-
-            <div class="skill">
-    Web Development
-</div>
-
-<div class="skill">
-    HTML & CSS
-</div>
-
-            <div class="skill">
-                Database Management
-            </div>
-
-            <div class="skill">
-                Robotics
-            </div>
-
-            <div class="skill">
-                Physical Computing
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects">
-
-        <h2>
-            My Projects
-        </h2>
-
-        <div class="projects-container">
-
-            <div class="project">
-
-                <h3>
-                    C Programming Projects
-                </h3>
-
-                <p>
-                    I have developed different C programs for
-                    calculations, decision making and other
-                    programming exercises.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>
-                    C++ Programming Projects
-                </h3>
-
-                <p>
-                    I have developed different C++ programs involving
-                    calculations, grading systems and other
-                    programming exercises.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>
-                    Personal Website
-                </h3>
-
-                <p>
-                    This personal portfolio website is one of my
-                    web development projects.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>
-                    ICT Projects
-                </h3>
-
-                <p>
-                    I have worked on different ICT-related academic
-                    projects involving computer applications,
-                    databases and system development.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact">
-
-        <h2>
-            Contact Me
-        </h2>
-
-      <div class="contact">
-
-    <p>
-        📧 Email:
-        <a href="mailto:Dansonihachi@gmail.com">
-            Dansonihachi@gmail.com
-        </a>
-    </p>
-
-    <p>
-        📱 Phone:
-        <a href="tel:+254741576067">
-            +254 741 576 067
-        </a>
-    </p>
-
-    <p>
-        📍 Location: Kenya
-    </p>
-
-    <p>
-        🌐 Facebook:
-        <a href="https://www.facebook.com/profile.php?id=61554581677224"
-           target="_blank"
-           rel="noopener noreferrer">
-            Haji Jones
-        </a>
-    </p>
-
-    <p>
-        📸 Instagram:
-        <a href="https://www.instagram.com/hajijones6"
-           target="_blank"
-           rel="noopener noreferrer">
-            @hajijones6
-        </a>
-    </p>
-
-</div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026
-            <span>Danson Ihachi</span>.
-            All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-</body>
-</html>
+                Microsoft
